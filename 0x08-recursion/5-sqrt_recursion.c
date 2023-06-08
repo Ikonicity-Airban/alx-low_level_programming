@@ -1,52 +1,30 @@
 #include"main.h"
 
 /**
- * sqrtRecursive - A function
- * Description: A function that prints
- * the natural number of the given int
- * @x: int
- * @low: int lowest number
- * @high: int high number
- * Return: Returns -1 error or int
+ * _sqrt_recursion - Compute the
+ * natural square root of a number recursively
+ * @n: The number to compute the square root of
+ * Return: The natural square root of n,
+ * or -1 if n does not have a natural square root
  */
-
-int sqrtRecursive(int x, int low, int high)
-{
-	int mid, square;
-
-	if (low > high)
-	{
-		return (-1);
-	}
-	mid = (low + high) / 2;
-	square = mid * mid;
-
-	if (square == x)
-	{
-		return (mid);
-	}
-	else if (square < x)
-	{
-		return (sqrtRecursive(x, mid + 1, high));
-	}
-	else
-	{
-		return (sqrtRecursive(x, low, mid - 1));
-	}
-}
-
-/**
- * _sqrt_recursion - Entry point
- * Description: A function that finds the square root of nunber
- * @n: the number.
- * Return: return the natural sqrt or -1.
- */
-
 int _sqrt_recursion(int n)
 {
 	if (n < 0)
 	{
 		return (-1);
 	}
-	return (sqrtRecursive(n, 0, n));
+	if (n == 0 || n == 1)
+	{
+		return (n);
+	}
+	int i;
+	for (i = 1; i * i <= n; i++)
+	{
+		if (i * i == n)
+		{
+			return (i);
+		}
+	}
+	return (_sqrt_recursion(n - 1));
 }
+
