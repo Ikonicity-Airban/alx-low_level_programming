@@ -12,8 +12,12 @@
 int main(__attribute__((unused)) int argc, char **argv)
 {
 	char *c = argv[1];
+	int i = 0;
 
-	while (*c++)
-		_putchar(*c);
+	while (c[i] != '\0')
+	{
+		_putchar(c[i]);
+		i++;
+	}
 	return (0);
 }
