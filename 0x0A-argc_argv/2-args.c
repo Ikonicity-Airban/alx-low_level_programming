@@ -13,7 +13,7 @@ int main(int argc, char **argv)
 {
 	int i, j = 1;
 
-	while (j < argc)
+	while (j++ < argc)
 	{
 		i = 0;
 		while (*argv[i] != '\0')
