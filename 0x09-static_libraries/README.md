@@ -1,0 +1,3 @@
+# 0x09-static_libraries
+
+A static library generated from functions from previous project...
