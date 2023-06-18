@@ -16,9 +16,10 @@ int main(int argc, char **argv)
 	while (j++ < argc)
 	{
 		i = 0;
-		while (*argv[i] != '\0')
+		while (argv[j][i] != '\0')
 		{
-			_putchar(*argv[i]++);
+			_putchar(argv[j][i]);
+			i++;
 		}
 		_putchar('\n');
 	}
