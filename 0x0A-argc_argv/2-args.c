@@ -11,9 +11,9 @@
 
 int main(int argc, char **argv)
 {
-	int i, j = 1;
+	int i, j = 0;
 
-	while (j++ < argc)
+	while (j < argc)
 	{
 		i = 0;
 		while (argv[j][i] != '\0')
@@ -22,6 +22,7 @@ int main(int argc, char **argv)
 			i++;
 		}
 		_putchar('\n');
+		j++;
 	}
 	return (0);
 }
