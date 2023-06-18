@@ -11,7 +11,7 @@
 
 int main(int argc, __attribute__((unused)) char **argv)
 {
-	_putchar(argc + '0');
-	_putchar('/');
+	_putchar(argc - 1 + '0');
+	_putchar('\n');
 	return (0);
 }
