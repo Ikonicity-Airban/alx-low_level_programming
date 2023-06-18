@@ -11,12 +11,12 @@
 
 int main(int argc, char **argv)
 {
-	int i;
+	int i, j = 1;
 
-	while (++(*argv) != NULL)
+	while (j < argc)
 	{
 		i = 0;
-		while (*argv[i] != NULL)
+		while (*argv[i] != '\0')
 		{
 			_putchar(*argv[i]++);
 		}
