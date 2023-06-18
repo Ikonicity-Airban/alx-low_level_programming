@@ -1,4 +1,4 @@
-#include"main.h"
+#include "main.h"
 
 /**
  * main - Entry point
@@ -11,13 +11,13 @@
 
 int main(__attribute__((unused)) int argc, char **argv)
 {
-	char *c = argv[1];
 	int i = 0;
 
-	while (c[i] != '\0')
+	while (argv[1][i] != '\0')
 	{
-		_putchar(c[i]);
+		_putchar(argv[1][i]);
 		i++;
 	}
+	_putchar('\n');
 	return (0);
 }
