@@ -13,7 +13,7 @@ int main(int argc, char **argv)
 {
 	int i;
 
-	while (++(*argv) = NULL)
+	while (++(*argv) != NULL)
 	{
 		i = 0;
 		while (*argv[i] != NULL)
