@@ -7,28 +7,34 @@
  */
 void print_number(int num)
 {
-	char buffer[10];
-	int i = 0, digit = 0;
+    char buffer[10];
+    int i = 0, digit = 0;
 
-	if (num == 0)
-	{
-		_putchar('0');
-		return;
-	}
+    if (num == 0)
+    {
+        _putchar('0');
+        return;
+    }
 
-	/* Convert the number to a string in reverse order */
-	while (num > 0)
-	{
-		digit = num % 10;
-		buffer[i++] = '0' + digit;
-		num /= 10;
-	}
+    if (num < 0)
+    {
+        _putchar('-');
+        num *= -1;
+    }
 
-	/* Print the string in correct order */
-	while (--i >= 0)
-	{
-		_putchar(buffer[i]);
-	}
+    /* Convert the number to a string in reverse order */
+    while (num > 0)
+    {
+        digit = num % 10;
+        buffer[i++] = '0' + digit;
+        num /= 10;
+    }
+
+    /* Print the string in correct order */
+    while (--i >= 0)
+    {
+        _putchar(buffer[i]);
+    }
 }
 
 /**
