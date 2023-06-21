@@ -37,7 +37,8 @@ int main(int argc, char **argv)
 	/* checks if no argument was passed to the program */
 	if (argc < 2)
 	{
-		putchar(0);
+		printf("0\n");
+		return (0);
 	}
 
 	for (i = 1; i < argc; i++)
