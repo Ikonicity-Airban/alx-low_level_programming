@@ -12,28 +12,29 @@
 
 int main(int argc, char **argv)
 {
-	int amount = atoi(argv[2]);
-	int cents[5] = {25, 10, 5, 2};
-	unsigned int change = 0;
+	int amount;
+	int cents[] = {25, 10, 5, 2, 1};
+	unsigned int change = 0, i = 0;
 
 	if (argc != 2)
 	{
-		printf("Error\n"); 
+		printf("Error\n");
 		return (1);
 	}
 	else
 	{
-		while(amount < 0)
+		amount = atoi(argv[1]);
+		while (amount > 0)
 		{
-			if (amount < *cents)
+			if (amount < cents[i])
 			{
-				*cents++;
+				i++;
 				continue;
 			}
-			amount -= *cents;
+			amount -= cents[i];
 			change++;
 		}
-		printf("%d", change);
+		printf("%d\n", change);
 	}
 	return (0);
 }
