@@ -33,7 +33,7 @@ int isNum(char num[])
 int main(int argc, char **argv)
 {
 	int sum, i;
-	
+
 	/* checks if no argument was passed to the program */
 	if (argc < 2)
 	{
