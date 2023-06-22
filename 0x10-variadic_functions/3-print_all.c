@@ -66,7 +66,8 @@ void print_string(va_list list)
  *
  * @format: a string of characters representing the argument types
  *
- * Description: If any argument not of type char, int, float or char * is ignored
+ * Description: If any argument not of type char,
+ * int, float or char * is ignored
  *
  * Return: nothing
  */
